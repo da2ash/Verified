@@ -1,0 +1,53 @@
+<%include ./partials/header%>
+
+
+
+    
+    <% if(!currentUser){ %>
+        
+    	<div class="card" style="width: 30rem;">
+	  <img class="card-img-top" src="https://www.draglet.com/wp-content/uploads/2018/04/kyc.jpg" alt="Card image cap">
+	  <div class="card-body">
+	    <h5 class="card-title">Need for KYC</h5>
+	    <p class="card-text">Know Your Customer (KYC) is the process organisations use to verify, collect, and classify a customer’s identity. This can be seen as a customer identification process where a customer’s identity, financial status, and address are verified. This verification process must be carried out before financial institutions can onboard customers and open new accounts. To adhere to Anti- Money Laundering compliance, KYC is necessary. Customer profiles help financial institutions understand the scope of the customer relationships. Generic steps to achieve this are per below.</p>
+	    <a href="http://business.rediff.com/report/2010/oct/18/perfin-why-kyc-is-mandatory-now.htm" class="btn btn-primary">Read More</a>
+	  </div>
+	</div>
+
+    <% } else { %>
+    
+    	<div class="container">
+  		<div class="title">KNOW YOUR CUSTOMER</div>
+  		<div class="subtitle"> Your Identity  Our Responsibilty </div>
+  		<div class="subtitle"> <a href="/user/<%=currentUser._id%>">Visit your page</a>  </div>
+
+	  	
+
+	<% } %>
+
+<script>
+    
+    
+    $(document).ready(function(){
+  var mouseX, mouseY;
+  var ww = $( window ).width();
+  var wh = $( window ).height();
+  var traX, traY;
+  $(document).mousemove(function(e){
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    traX = ((4 * mouseX) / 570) + 40;
+    traY = ((4 * mouseY) / 570) + 50;
+    console.log(traX);
+    $(".title").css({"background-position": traX + "%" + traY + "%"});
+  });
+});
+
+</script>
+
+		
+	
+
+    
+
+<%include ./partials/footer%>

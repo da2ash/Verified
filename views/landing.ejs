@@ -1,0 +1,12 @@
+<%include ./partials/header%>
+    <h1>This is the landing page</h1>
+    
+    <% if(!currentUser){ %>
+        <h1>Hellloooo</h1>
+    <% } else { %>
+    
+        <p>You have been logged in</p>
+        <a href="/user/<%=currentUser._id%>">See the id</a>
+    <% } %>
+
+<%include ./partials/footer%>

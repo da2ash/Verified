@@ -1,0 +1,40 @@
+<%include ./partials/header%>
+
+	<div class="jumbotron">
+  <h1 class="display-4">Hello <%=user_in_show.username%></h1>
+  <p class="lead">The objectives of KYC guidelines is to prevent banks from being used, intentionally or unintentionally, by criminal elements for money laundering activities. Related procedures also enable banks to better understand their customers and their financial dealings.</p>
+  <hr class="my-4">
+  <p>You can upload your KYC documents now tht you have signed up for our services...</p>
+  <a class="btn btn-primary btn-lg" href="/test_PAN" role="button">Upload Pan Card</a>
+  <a class="btn btn-primary btn-lg" href="/test_LISC" role="button">Upload Licence</a>
+</div>
+
+
+
+<div class="card" style="width: 25rem;">
+  <img class="card-img-top" src="https://s3.ap-southeast-1.amazonaws.com/cdn.deccanchronicle.com/sites/default/files/CARD_1.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Pan Card Details</h5>
+    <p class="card-text"><strong>Name:</strong> <%=panName%></p>
+    <p class="card-text"><strong>Date of Birth:</strong> <%=panDOB%></p>
+    <p class="card-text"><strong>Document ID:</strong><%=panID%></p>
+    <a href="#" class="btn btn-primary">Pan Card</a>
+  </div>
+</div>
+
+
+
+<div class="card" style="width: 25rem;">
+  <img class="card-img-top" src="https://mbtskoudsalg.com/images/drivers-license-clipart-animated-2.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Licence Details</h5>
+    <p class="card-text"><strong>Name:</strong> <%=liscName%></p>
+    <p class="card-text"><strong>Date of Birth:</strong> <%=liscDOB%></p>
+    <p class="card-text"><strong>Document ID:</strong><%=liscID%></p>
+    <p class="card-text"><strong>Document ID:</strong><%=liscAdd%></p>
+    <a href="#" class="btn btn-primary">Licence</a>
+  </div>
+</div>
+
+<%include ./partials/footer%>
+

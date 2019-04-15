@@ -1,0 +1,38 @@
+<%include partials/header%>
+<h2 style="text-align:center">Add details to <%= foundUser_in_details.username%></h2>
+
+<div class="center">
+    <form action="/user/<%=foundUser_in_details._id%>/details" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter name" name="user_details[name]">
+      </div>
+      
+      <div class="form-group">
+        <label for="dob">DOB</label>
+        <input type="text" class="form-control" id="dob" placeholder="Enter DOB" name="user_details[dob]">
+      </div>
+      
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Enter address" name="user_details[address]">
+      </div>
+      
+      <div class="form-group">
+        <label for="kyc_document">Kyc Document</label>
+        <input type="text" class="form-control" id="kyc_document" placeholder="KYC Document Type" name="user_details[kyc_document]">
+      </div>
+      
+      <div class="form-group">
+        <label for="kyc_id">KYC</label>
+        <input type="text" class="form-control" id="kyc_id" placeholder="KYC ID" name="user_details[kyc_id]">
+      </div>
+      
+      
+        <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+
+<%include partials/footer%>

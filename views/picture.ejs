@@ -1,0 +1,14 @@
+<%include ./partials/header%>
+    <h1>This is the index page</h1>
+    
+    <% if(!currentUser){ %>
+        <h1>Hello please Log in</h1>
+    <% } else { %>
+    
+        <p>Your KYC has been saved succesfully</p>
+        <a href="/user/<%=currentUser._id%>">Now upload your picture..</a>
+		<a class="btn btn-primary btn-lg" href="/user" role="button">Upload Photo</a>
+
+    <% } %>
+
+<%include ./partials/footer%>
